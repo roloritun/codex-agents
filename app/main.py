@@ -1,7 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from agent import create_langchain_agent
+from app.agent import create_langchain_agent
 
+#TODO:
 app = FastAPI()
 
 class Query(BaseModel):
@@ -15,7 +16,7 @@ def root():
 def run_agent(query: Query):
     try:
         agent = create_langchain_agent()
-        response = agent.invoke(query.text)
+        response = agent.invoke({"input":query.text})
         return {"response": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

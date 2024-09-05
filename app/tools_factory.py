@@ -1,9 +1,9 @@
 import json
 from pydantic import BaseModel, Field
-from database import DatabaseConnection, API
+from app.database import DatabaseConnection, API
 from sqlalchemy.orm import Session
-from tools import DbTool, ApiTool
-from utils import Llm, fetch_openapi_spec
+from app.tools import DbTool, ApiTool
+from app.utils import Llm, fetch_openapi_spec
 from langchain_community.agent_toolkits.openapi.spec import reduce_openapi_spec
 from langchain_community.utilities import RequestsWrapper
 

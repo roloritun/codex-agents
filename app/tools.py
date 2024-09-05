@@ -6,7 +6,7 @@ from langchain_community.utilities import SQLDatabase
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_community.agent_toolkits.openapi import planner
 from langchain_community.agent_toolkits.openapi.spec import ReducedOpenAPISpec
-from constants import ALLOW_DANGEROUS_REQUEST, DEFAULT_DB_TOOL_PROMPT, API_TOOL_VERBOSE, DB_TOOL_VERBOSE
+from app.constants import ALLOW_DANGEROUS_REQUEST, DEFAULT_DB_TOOL_PROMPT, API_TOOL_VERBOSE, DB_TOOL_VERBOSE
 from langchain_community.utilities import RequestsWrapper
 
 
