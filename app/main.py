@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from app.agent import create_langchain_agent
+from .agent import create_langchain_agent
 
 #TODO:
 app = FastAPI()
